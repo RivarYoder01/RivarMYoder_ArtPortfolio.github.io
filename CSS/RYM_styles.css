@@ -67,14 +67,17 @@ body {
 
 .navigation {
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas:
         "nav_a logo nav_b";
 }
 
+.nav_a, .nav_b {
+    padding: 10px;
+}
+
 .nav_a ul, .nav_b ul {
     display: flex;
-    padding: 10px;
 }
 
 nav a:hover {
@@ -128,10 +131,6 @@ li.dropdown {
     display: block;
 }
 
-.logo h1 {
-    grid-area: logo;
-}
-
 header .logo, footer .logo {
     font-family: "Kings", cursive;
     font-size: 82px;
@@ -142,6 +141,10 @@ header .logo, footer .logo {
     padding: 0;
     margin: 0;
     text-decoration: none;
+}
+
+.logo {
+    grid-area: logo;
 }
 
 header .logo a:hover, header .logo a:active, header .logo a:visited, header .logo a:link,
@@ -376,12 +379,12 @@ h4 {
 /*MEDIA QUERIES------------------------------------------------------*/
 @media all and (max-width: 1470px) {
     .navigation {
-        grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas:
         "logo"
         "nav_a"
-        "nav_b";
+    "nav_b";
         grid-row-gap: 20px;
     }
 
