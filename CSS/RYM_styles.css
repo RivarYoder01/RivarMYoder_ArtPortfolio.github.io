@@ -69,7 +69,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-areas:
-        "nav_a" "logo" "nav_b";
+        "nav_a logo nav_b";
 }
 
 .nav_a ul, .nav_b ul {
@@ -193,6 +193,8 @@ p {
     font-family: "Nunito Sans", sans-serif;
     font-size: 20px;
     color: #E9E3DE;
+    text-align: justify;
+    line-height: 1.5em;
     padding: 60px 80px 0 80px;
 }
 
@@ -256,6 +258,8 @@ hr {
     color: #E3C49B;
     background-color: #E3C49B;
     height: 3px;
+    width: 100%;
+    margin: auto 0 auto 0;
 }
 
 /*FOOTER------------------------------------------------------*/
@@ -294,6 +298,81 @@ footer .logo {
     padding: 0 0 20px 0;
 }
 
+/*ABOUT--------------------------------------------*/
+.title {
+    padding: 200px 0 0 0;
+    display: grid;
+    grid-template-columns: fit-content(30rem) 1fr;
+}
+
+.title h2 {
+    text-align: left;
+    padding: 0 20px 0 0;
+    margin: 0;
+}
+
+.bio {
+    padding-bottom: 60px;
+}
+
+.bio p {
+    padding: 50px 0 10px 0;
+    color: #E3C49B;
+}
+
+.bio img {
+    float: left;
+    padding: 40px 40px 20px 0;
+}
+
+/*CONTACT -----------------------------------------------------------*/
+form .submit {
+    display: flex;
+    margin: auto;
+    column-gap: 20px;
+}
+
+input {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 18px;
+    background-color: #E9E3DE;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border: 2px solid #E3C49B;
+    border-radius: 5px;
+}
+
+label {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 20px;
+    color: #E9E3DE;
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+h4 {
+    color: #C1A7E1;
+    font-family: "Cinzel Decorative", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-bottom: 30px;
+}
+
+.full_contact {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    padding: 60px 0;
+}
+
+.full_contact p {
+    padding: 20px 0 0 0;
+
+}
+
 /*MEDIA QUERIES------------------------------------------------------*/
 @media all and (max-width: 1470px) {
     .navigation {
@@ -303,11 +382,16 @@ footer .logo {
         "logo"
         "nav_a"
         "nav_b";
+        grid-row-gap: 20px;
     }
 
     .nav_a ul, .nav_b ul {
         display: inline-block;
         padding: 10px;
+    }
+
+    .title {
+        padding: 300px 0 0 0;
     }
 
     .preview_gallery {
@@ -327,6 +411,15 @@ footer .logo {
         padding-left: 0;
         margin: auto;
         text-align: center;
+    }
+
+    .full_contact {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        justify-content: center;
+
+        padding: 60px 0;
     }
 
     footer {
